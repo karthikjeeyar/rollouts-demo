@@ -28,6 +28,11 @@ spec:
   strategy:
     canary:
       canaryService: canary-demo-preview
+      stableService: canary-demo
+      trafficRouting:
+        nginx:
+          # Either stableIngress or stableIngresses must be configured, but not both.
+          stableIngress: canary-demo
       steps:
       - setWeight: 20
       - pause: {}
