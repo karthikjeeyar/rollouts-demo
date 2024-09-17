@@ -30,7 +30,7 @@ spec:
       canaryService: canary-demo-preview
       stableService: canary-demo
       trafficRouting:
-        nginx:
+        default:
           # Either stableIngress or stableIngresses must be configured, but not both.
           stableIngress: canary-demo
       steps:
